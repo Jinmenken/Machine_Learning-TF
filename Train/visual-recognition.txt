@@ -1,0 +1,20 @@
+curl -X POST -F "beagle_positive_examples=@C:/Users/Propietario/Desktop/img/beagle.zip" -F "husky_positive_examples=@C:/Users/Propietario/Desktop/img/husky.zip" -F "goldenretriever_positive_examples=@C:/Users/Propietario/Desktop/img/golden-retriever.zip" -F "negative_examples=@C:/Users/Propietario/Desktop/img/cats.zip" -F "name=dogs" "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers?api_key="b73ed0f313e440bc9a2a9127867c8758dbbac93f"&version=2016-05-20"
+
+{
+  "classifier_id": "dogs_1941945966",
+  "name": "dogs",
+  "owner": "xxxx-xxxxx-xxx-xxxx",
+  "status": "training",
+  "created": "2016-05-18T21:32:27.752Z",
+  "classes": [
+    {"class": "husky"},
+    {"class": "goldenretriever"},
+    {"class": "beagle"}
+  ]
+}
+
+
+curl -X GET "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers/"dogs_2021636601"?api_key="b73ed0f313e440bc9a2a9127867c8758dbbac93f"&version=2016-05-20"
+
+
+curl -X POST -F "images_file=@C:/Users/Valky/Downloads/Beagle-6.jpg" -F "parameters=@C:/Users/Valky/Downloads/myparams.json" "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key="b73ed0f313e440bc9a2a9127867c8758dbbac93f"&version=2016-05-20"
